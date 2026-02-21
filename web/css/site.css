@@ -1,0 +1,146 @@
+main > .container {
+  flex: 1;
+  padding: 70px 15px 20px;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+.custom-footer {
+  background-color: #0d1b2a;
+  width: 100%;
+}
+
+.custom-footer h5 {
+  font-weight: 600;
+}
+
+.custom-footer p {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.not-set {
+  color: #c55;
+  font-style: italic;
+}
+
+/* NAVBAR */
+.custom-navbar {
+  background-color: #000000;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+  margin-left: 15px;
+  transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #00b4d8 !important;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #00b4d8;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0096c7;
+}
+
+.hero-section {
+  height: 100vh;
+  background:
+    linear-gradient(rgba(13, 27, 42, 0.85), rgba(13, 27, 42, 0.85)),
+    url("https://images.unsplash.com/photo-1518770660439-4636190af475");
+  background-size: cover;
+  background-position: center;
+  padding: 0 20px;
+}
+t
+
+/* add sorting icons to gridview sort links */
+a.asc:after,
+a.desc:after {
+  content: "";
+  left: 3px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: solid 5px transparent;
+  margin: 4px 4px 2px 4px;
+  background: transparent;
+}
+
+a.asc:after {
+  border-bottom: solid 7px #212529;
+  border-top-width: 0;
+}
+
+a.desc:after {
+  border-top: solid 7px #212529;
+  border-bottom-width: 0;
+}
+
+.grid-view th {
+  white-space: nowrap;
+}
+
+.hint-block {
+  display: block;
+  margin-top: 5px;
+  color: #999;
+}
+
+.error-summary {
+  color: #a94442;
+  background: #fdf7f7;
+  border-left: 3px solid #eed3d7;
+  padding: 10px 20px;
+  margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li > form > button.logout {
+  padding-top: 7px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 767px) {
+  .nav li > form > button.logout {
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.nav > li > form > button.logout:focus {
+  outline: none;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+.card {
+  border-radius: 10px;
+}
