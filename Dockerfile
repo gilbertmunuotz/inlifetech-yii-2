@@ -1,8 +1,8 @@
 # Use PHP + Apache
 FROM php:8.2-apache
 
-# Install extensions Yii2 needs
-RUN docker-php-ext-install pdo pdo_mysql mbstring
+# Skip optional extensions since no DB yet
+RUN docker-php-ext-install pdo
 
 # Enable Apache rewrite module for pretty URLs
 RUN a2enmod rewrite
