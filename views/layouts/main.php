@@ -78,7 +78,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <h5>System Status</h5>
                     <p>Server: Online</p>
                     <p>Framework: Yii2</p>
-                    <p>Environment: Development</p>
+                    <p>Environment: Production</p>
                 </div>
 
                 <div class="col-md-6 text-md-end">
