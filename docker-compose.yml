@@ -1,9 +1,26 @@
-version: '2'
-services:
-  php:
-    image: yiisoftware/yii2-php:7.4-apache
-    volumes:
-      - ~/.composer-docker/cache:/root/.composer/cache:delegated
-      - ./:/app:delegated
-    ports:
-      - '8000:80'
+# Use PHP + Apache image (7.4 or 8.2)
+FROM php:8.2-apache
+
+# Install PHP extensions Yii2 needs
+RUN docker-php-ext-install pdo pdo_mysql mbstring
+
+# Enable Apache rewrite (for pretty URLs)
+RUN a2enmod rewrite
+
+# Set working directory
+WORKDIR /var/www/html
+
+# Copy project into container
+COPY . /var/www/html
+
+# Copy Composer from official image
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+
+# Install dependencies (production only)
+RUN composer install --no-dev --optimize-autoloader
+
+# Expose port
+EXPOSE 8080
+
+# Start Apache in foreground
+CMD ["apache2-foreground"]
