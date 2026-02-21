@@ -1,5 +1,5 @@
 # Use PHP + Apache
-FROM php:8.2-apache
+FROM php:8.4-apache
 
 # Skip optional extensions since no DB yet
 RUN docker-php-ext-install pdo
