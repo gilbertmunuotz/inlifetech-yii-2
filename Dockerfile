@@ -2,7 +2,7 @@
 FROM php:8.4-apache
 
 # Install PHP extensions needed by Yii2
-RUN docker-php-ext-install pdo pdo_mysql mbstring
+RUN docker-php-ext-install pdo 
 
 # Install Git + unzip for Composer
 RUN apt-get update && apt-get install -y git unzip && rm -rf /var/lib/apt/lists/*
